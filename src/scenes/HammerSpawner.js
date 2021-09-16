@@ -16,16 +16,7 @@ export default class HammerSpawner {
   }
 
   spawn() {
-    let spawnLocation = true;
-    let x;
-    if (spawnLocation) {
-      x = 30;
-      !spawnLocation;
-    } else {
-      x = 760;
-      !spawnLocation;
-    }
-    const hammer = this.group.create(x, 16, this.key);
+    const hammer = this.group.create(30, 16, this.key);
     hammer.setBounce(1);
     hammer.setCollideWorldBounds(true);
     hammer.setVelocity(Phaser.Math.Between(-200, 200), 20);

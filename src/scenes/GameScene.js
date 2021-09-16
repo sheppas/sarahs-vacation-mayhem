@@ -59,7 +59,13 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
-    this.hammerSpawner.spawn()
+    let time = Math.floor(this.time.now)
+    console.log(time)
+    console.log(time % 173 === 0)
+    if (time % 173 === 0){
+      this.hammerSpawner.spawn()
+    }
+
 
     if(this.gameOver) {
       return
@@ -140,9 +146,6 @@ export default class GameScene extends Phaser.Scene {
   collectBottle(player, bottle) {
     bottle.disableBody(true, true)
     this.hydration.setScore("YES!")
-    this.hammerSpawner.spawn();
-
-
   }
 
   createHydrationLabel(x, y, score) {

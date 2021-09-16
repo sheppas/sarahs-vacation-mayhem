@@ -11,7 +11,6 @@ const config = {
 		default: 'arcade',
 		arcade: {
 			gravity: { y: 300 },
-			fps: 60
 		}
 	},
 	scene: [GameScene, HelloWorldScene]
